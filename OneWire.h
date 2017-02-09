@@ -199,7 +199,7 @@ void directModeInput(volatile IO_REG_TYPE *base, IO_REG_TYPE pin)
 {
     if (SS_GPIO == GPIO_TYPE(pin)) {
         WRITE_ARC_REG(READ_ARC_REG((((IO_REG_TYPE)base) + DIR_OFFSET_SS)) & ~(0x01 << GPIO_ID(pin)),
-			((IO_REG_TYPE)(base) + DIR_OFFSET_SS));
+            ((IO_REG_TYPE)(base) + DIR_OFFSET_SS));
     } else {
         MMIO_REG_VAL_FROM_BASE((IO_REG_TYPE)base, DIR_OFFSET_SOC) &= ~(0x01 << GPIO_ID(pin));
     }
@@ -210,7 +210,7 @@ void directModeOutput(volatile IO_REG_TYPE *base, IO_REG_TYPE pin)
 {
     if (SS_GPIO == GPIO_TYPE(pin)) {
         WRITE_ARC_REG(READ_ARC_REG(((IO_REG_TYPE)(base) + DIR_OFFSET_SS)) | (0x01 << GPIO_ID(pin)),
-			((IO_REG_TYPE)(base) + DIR_OFFSET_SS));
+            ((IO_REG_TYPE)(base) + DIR_OFFSET_SS));
     } else {
         MMIO_REG_VAL_FROM_BASE((IO_REG_TYPE)base, DIR_OFFSET_SOC) |= (0x01 << GPIO_ID(pin));
     }
@@ -362,8 +362,8 @@ class OneWire
     //    ReadBytes(net, buf+3, 10);  // Read 6 data bytes, 2 0xFF, 2 CRC16
     //    if (!CheckCRC16(buf, 11, &buf[11])) {
     //        // Handle error.
-    //    }     
-    //          
+    //    }
+    //
     // @param input - Array of bytes to checksum.
     // @param len - How many bytes to use.
     // @param inverted_crc - The two CRC16 bytes in the received data.
