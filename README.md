@@ -1,3 +1,5 @@
+Please go to [Piotr Stolarz's OneWireNg](https://github.com/pstolarz/OneWireNg)
+
 # OneWire
 Library for Dallas/Maxim 1-Wire Chips
 
